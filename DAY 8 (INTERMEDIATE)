@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int N, B;
+        cin >> N >> B;
+
+        int maxArea = 0;
+
+        for (int i = 0; i < N; i++) {
+            int W, H, P;
+            cin >> W >> H >> P;
+
+            if (P <= B) {
+                int area = W * H;
+                if (area > maxArea) {
+                    maxArea = area;
+                }
+            }
+        }
+
+        if (maxArea == 0) {
+            cout << "no tablet" << endl;
+        } else {
+            cout << maxArea << endl;
+        }
+	}
+	return 0;
+}
