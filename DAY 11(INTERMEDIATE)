@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t,i;
+cin>>t;
+while(t--)
+{
+    int n;
+    int count=0;
+    cin>>n;
+    int max=INT_MIN;
+    unordered_map<int,int>m;
+    int a[n],f[n];
+    for(int i=0;i<n;i++)
+ {   cin>>a[i];
+    m[a[i]]++;
+}
+     for(auto a:m)
+     {
+     if(a.second>max)
+     max=a.second;
+     }
+     cout<<n-max<<endl;
+}
+	return 0;
+}
