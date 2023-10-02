@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int t,i;
+   cin>>t;
+   long long n,x;
+   while(t--){
+       
+       int max=0;
+       
+       cin>>n;
+       for(i=1;i<=n;i++){
+       cin>>x;
+       
+       if(x>max)
+       max=x;
+       }
+       
+       cout<<max<<"\n";
+   }
+       return 0;
+}
