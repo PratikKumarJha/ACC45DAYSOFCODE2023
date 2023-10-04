@@ -1,0 +1,68 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+
+	int T;
+	cin>>T;
+	while(T--)
+	{
+	    int n;
+	    cin>>n;
+	    vector<int> v;
+	    vector<int> v1;
+	    for(int i=0;i<n;i++)
+	    {
+	    int a;
+	    cin>>a;
+	    v.push_back(a);
+	    }
+	    for(int i=0;i<n;i++)
+	    {
+	    int a;
+	    cin>>a;
+	    v1.push_back(a);
+	    }
+	  int streak1=0;
+	  int streak2=0;
+	  int maxstreak1=0;
+	  int maxstreak2=0;
+	  for(int i=0;i<n;i++)
+	  {
+	      if(v[i]>0)
+	      {
+	          streak1++;
+	      }
+	      else
+	      {
+	          streak1=0;
+	      }
+	  
+	      if(v1[i]>0)
+	      {
+	          streak2++;
+	      }
+	      else
+	      {
+	          streak2=0;
+	      }
+	  
+	  maxstreak1= max(streak1, maxstreak1);
+	  maxstreak2= max(streak2, maxstreak2);
+	  }
+	  if(maxstreak1>maxstreak2)
+	  {
+	      cout<<"Om"<<endl;
+	  }
+	  else if(maxstreak2>maxstreak1)
+	  {
+	      cout<<"Addy"<<endl;
+	  }
+	  else
+	  {
+	      cout<<"Draw"<<endl;
+	  }
+	}
+	return 0;
+}
